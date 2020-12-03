@@ -126,6 +126,31 @@ body {
   color: var(--accent-color);
 }
 
+.auth-nav .item{
+  display: inline-flex;
+  align-items: center;
+
+}
+
+.auth-nav .button{
+  border:none;
+  padding: 0;
+  margin-right: 10px;
+  display: inline-flex;
+   color: var(--primary-text-color);
+   background-color: #fff;
+}
+
+.auth-nav .button-icon{
+  fill: currentColor;
+}
+
+.auth-nav .button:hover,
+.auth-nav .button:focus{
+    color: var(--accent-color);
+}
+
+
 /* Герой */
 .site-hero {
   background-color: var(--primari-background-color);
