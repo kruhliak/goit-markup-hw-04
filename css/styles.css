@@ -3,6 +3,7 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primari-background-color: #2f303a;
+  --primary-icon-color: #afb1b8;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  outline: 2px solid yellowgreen;
 }
 
 .logo {
@@ -116,6 +117,9 @@ body {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-nav .link:hover,
@@ -143,8 +147,8 @@ body {
   fill: currentColor;
 }
 
-.auth-nav .button:hover,
-.auth-nav .button:focus {
+.auth-nav .link:hover .button,
+.auth-nav .link:focus .button {
   color: var(--accent-color);
 }
 
@@ -244,6 +248,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f5f4fa;
+  border-radius: 4px;
 }
 
 .feature-list .title {
@@ -299,24 +304,56 @@ body {
 
 .team-list > .item {
   background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
 }
 
-.team-list > .title {
+.team-list .title {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin: 30px 0 10px 0;
 }
 
-.team-list > .title {
-  margin: 0 0 10px 0;
+.team-list .text {
+  margin: 0 0 16px 0;
 }
 
-.team-list > .text {
-  margin: 0;
+.team-list .icon-list {
+  display: flex;
+  margin: 0 32px 30px 32px;
+}
+
+.team-list .icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-list .icon-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-icon-color);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.team-list .icon {
+  fill: currentColor;
+}
+
+.team-list .icon-link:hover .icon,
+.team-list .icon-link:focus .icon {
+  fill: #fff;
+}
+.team-list .icon-link:hover,
+.team-list .icon-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Компании */
@@ -330,16 +367,14 @@ body {
   height: 90px;
   margin: 0;
   padding: 0;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
 .company-list > .item:not(:last-child) {
   margin-right: 30px;
 }
 
-.company-list > .item:hover,
-.company-list > .item:focus {
-  border-color: var(--accent-color);
+.company-icon:hover > .icon,
+.company-icon:focus > .icon {
+  fill: var(--accent-color);
 }
 
 .company-icon {
@@ -349,18 +384,20 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  border: 1px solid var(--primary-icon-color);
+  border-radius: 4px;
   justify-content: center;
   align-items: center;
-  color: #afb1b8;
+  color: var(--primary-icon-color);
 }
 
 .company-icon .icon {
   fill: currentColor;
 }
 
-.company-icon .icon:hover,
-.company-icon .icon:focus {
-  color: var(--accent-color);
+.company-icon:hover,
+.company-icon:focus {
+  border-color: var(--accent-color);
 }
 
 /* Подвал */
@@ -371,6 +408,7 @@ body {
 .site-footer > .container {
   padding-bottom: 60px;
   padding-top: 60px;
+  display: flex;
 }
 
 .site-footer .logo-end {
@@ -412,6 +450,48 @@ body {
 
 .site-footer .link {
   display: block;
+}
+
+.site-footer .title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.site-footer .follow {
+  margin-left: 70px;
+  display: block;
+}
+
+.follow .icon-list {
+  display: flex;
+}
+
+.follow .icon-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.follow .icon-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.follow .icon {
+  fill: currentColor;
+}
+
+.follow .icon-link:hover,
+.follow .icon-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* portfolio.html */
@@ -479,6 +559,12 @@ body {
 
 .example-list > .item:nth-child(-n + 3) {
   margin-top: 0;
+}
+
+.example-list > .item:hover,
+.example-list > .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .example-list .title {

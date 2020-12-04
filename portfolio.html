@@ -24,21 +24,35 @@
         >
 
         <ul class="site-nav list">
-          <li class="item"><a href="./index.html" class="link">Студия</a></li>
           <li class="item">
-            <a href="./portfolio.html" class="link active">Портфолио</a>
+            <a href="./index.html" class="link active">Студия</a>
+          </li>
+          <li class="item">
+            <a href="./portfolio.html" class="link">Портфолио</a>
           </li>
           <li class="item"><a href="#" class="link">Контакты</a></li>
         </ul>
 
         <ul class="auth-nav list">
           <li class="item">
-            <a href="mailto:info@devstudio.com" class="link"
-              >info@devstudio.com</a
+            <a href="mailto:info@devstudio.com" class="link">
+              <div class="button">
+                <svg class="button-icon" width="16px" height="12px">
+                  <use href="./img/sprite.svg#icon-mail"></use>
+                </svg>
+              </div>
+              info@devstudio.com</a
             >
           </li>
           <li class="item">
-            <a href="tel:+38096111111" class="link">+38 096 111 11 11</a>
+            <a href="tel:+38096111111" class="link">
+              <div class="button">
+                <svg class="button-icon" width="10px" height="16px">
+                  <use href="./img/sprite.svg#icon-smartphone"></use>
+                </svg>
+              </div>
+              +38 096 111 11 11</a
+            >
           </li>
         </ul>
       </nav>
@@ -189,18 +203,55 @@
     <!-- Подвал -->
     <footer class="site-footer">
       <div class="container">
-        <a href="./index.html" class="logo"
-          >Web<span class="logo-end">Studio</span></a
-        >
-        <address class="contact-info">
-          <a href="https://goo.gl/maps/bzkinhmpRiBep3HJ8" class="link map"
-            >г. Киев, пр-т Леси Украинки, 26
-          </a>
-          <a href="mailto:info@example.com" class="link contact"
-            >info@example.com</a
+        <div>
+          <a href="./index.html" class="logo"
+            >Web<span class="logo-end">Studio</span></a
           >
-          <a href="tel:+380991111111" class="link contact">+38 099 111 11 11</a>
-        </address>
+          <address class="contact-info">
+            <a href="https://goo.gl/maps/bzkinhmpRiBep3HJ8" class="link map"
+              >г. Киев, пр-т Леси Украинки, 26
+            </a>
+            <a href="mailto:info@example.com" class="link contact"
+              >info@example.com</a
+            >
+            <a href="tel:+380991111111" class="link contact"
+              >+38 099 111 11 11</a
+            >
+          </address>
+        </div>
+        <div class="follow">
+          <h2 class="title">присоединяйтесь</h2>
+          <ul class="icon-list list">
+            <li class="icon-item">
+              <a href="#" class="icon-link">
+                <svg class="icon" width="20" height="20">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a href="#" class="icon-link">
+                <svg class="icon" width="20" height="20">
+                  <use href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a href="#" class="icon-link">
+                <svg class="icon" width="20" height="20">
+                  <use href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a href="#" class="icon-link">
+                <svg class="icon" width="20" height="20">
+                  <use href="./img/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
